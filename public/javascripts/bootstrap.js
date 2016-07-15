@@ -2363,7 +2363,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 function loadROT(){
-    document.getElementById("app").innerHTML='<fieldset class="form-group"><textarea id="texto" class="form-control"></textarea></fieldset><fieldset class="form-group"><button onClick="coded()" class="btn-default">Procesar</button></fieldset><fieldset class="form-group"><textarea id="cipher" class="form-control"></textarea></fieldset>';
+    document.getElementById("app").innerHTML='<H1><span class = "label label-default">Texto</span></H1><fieldset class="form-group"><textarea id="texto" class="form-control"></textarea></fieldset><fieldset class="form-group"><button onClick="coded()" class="btn-primary">Procesar</button></fieldset><fieldset class="form-group"><textarea id="cipher" class="form-control"></textarea></fieldset>';
 }
 function coded()
  {
