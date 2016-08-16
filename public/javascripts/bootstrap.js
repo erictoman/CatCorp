@@ -2377,9 +2377,13 @@ function loadROT1(){
     var b = eval(document.getElementById("b").value);
     var pot = eval(document.getElementById("n").value);
     var pos = eval(document.getElementById("n1").value)-1;
+    if(pos>(pot+1 || pos<1){
+       alert("Datos erróneos o sin sentido");
+    }else{
     var comb =(fact(pot)/(fact(pos)*fact(pot-pos)));
     var result=comb*(Math.pow(a,pot-pos)*(Math.pow(b,pos)));
     document.getElementById("ops").innerHTML="Valor: "+result;
+    }
 }
 function fact(n1){
     var fact=1;
