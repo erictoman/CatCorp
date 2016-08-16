@@ -2372,21 +2372,13 @@ $("#btn").click(function(){
     }});
 });
 
-$("#qqq").click(function(){
-    $.get({url: "http://mitchtrale.com/panodios/2009/11/new-stripes/", success: function(result){
-        $("#app").html(result);
-    }});
-});
-
-
-
 function loadROT1(){
     var a = document.getElementById("a").value;
     var b = document.getElementById("b").value;
     var pot = document.getElementById("n").value;
-    var pos = document.getElementById("n1").value;
-    var comb =(fact(pot)/fact(pos)*fact(pot-pos));
-    var result=comb*Math.pow(a,(pot-pos))*Math.pow(b,pos);
+    var pos = document.getElementById("n1").value-1;
+    var comb =(fact(pot)/(fact(pos)*fact(pot-pos)));
+    var result=comb*(Math.pow(a,pot-pos)*(Math.pow(b,pos)));
     document.getElementById("ops").innerHTML="Valor: "+result;
 }
 function fact(n1){
