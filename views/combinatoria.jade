@@ -8,16 +8,16 @@ div.form-group
     label Created by TTEU
     p
     label(for="a") Valor de a:
-    input.form-control(id="a")
+    input.form-control(id="a" onKeyPress="return soloNumeros(event)")
     p
     label(for="b") Valor de b:
-    input.form-control(id="b")
+    input.form-control(id="b" onKeyPress="return soloNumeros(event)")
     p
     label(for="n") Potencia:
-    input.form-control(id="n")
+    input.form-control(id="n" onKeyPress="return soloNumeros(event)")
     p
     label(for="n") Posicion:
-    input.form-control(id="n1")
+    input.form-control(id="n1" onKeyPress="return soloNumeros(event)")
     p
     button.btn-group(onclick="loadROT1();") Calcular
     <br>

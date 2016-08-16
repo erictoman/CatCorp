@@ -2389,6 +2389,11 @@ function fact(n1){
     return fact;
 }
 
+function soloNumeros(e){
+	var key = window.Event ? e.which : e.keyCode;
+	return ((key >= 48 && key <= 57) || (key==8) || (key==45) || (key==47))
+}
+
 
 function coded()
  {
