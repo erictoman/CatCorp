@@ -2373,10 +2373,10 @@ $("#btn").click(function(){
 });
 
 function loadROT1(){
-    var a = document.getElementById("a").value;
-    var b = document.getElementById("b").value;
-    var pot = document.getElementById("n").value;
-    var pos = document.getElementById("n1").value-1;
+    var a = eval(document.getElementById("a").value);
+    var b = eval(document.getElementById("b").value);
+    var pot = eval(document.getElementById("n").value);
+    var pos = eval(document.getElementById("n1").value)-1;
     var comb =(fact(pot)/(fact(pos)*fact(pot-pos)));
     var result=comb*(Math.pow(a,pot-pos)*(Math.pow(b,pos)));
     document.getElementById("ops").innerHTML="Valor: "+result;
