@@ -1,6 +1,11 @@
 var express = require('express');
 var app = express();
 var multer = require('multer');
+
+const Discord = require('discord.js');
+const bot = new Discord.Client();
+const token = 'MjIxODI1MDg0MzQ2NzI4NDQ4.CrEaig._MM4BcopK92bQpbr_U2py2e7COw';
+
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/');
@@ -52,5 +57,16 @@ app.get('/comb', function(req, res) {
   res.render('combinatoria');
 });
 
+bot.on('ready', () => {
+  console.log('I am ready!');
+});
+
+bot.on('message', message => {
+  if (message.content === 'ping') {
+    message.reply('pong');
+  }
+});
+
+bot.login(token);
 
 module.exports = app;
