@@ -4,7 +4,7 @@ var multer = require('multer');
 
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const token = 'MjIxODI1MDg0MzQ2NzI4NDQ4.CrEaig._MM4BcopK92bQpbr_U2py2e7COw';
+const token = 'MjIxODI1MDg0MzQ2NzI4NDQ4.CrG7Cw.ySEmkRn5KI-udEvxDewD9AC-xS8';
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -64,6 +64,12 @@ bot.on('ready', () => {
 bot.on('message', message => {
   if (message.content === 'ping') {
     message.reply('pong');
+  }
+});
+
+bot.on('message', message => {
+  if (message.content === 'cat') {
+    message.reply('dog');
   }
 });
 
